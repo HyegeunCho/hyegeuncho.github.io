@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Cra member location</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+function initMap() {
+  var LatLng_hyegeun = {lat: 37.386532, lng: 127.123348};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: LatLng_hyegeun
+  });
+
+  var marker = new google.maps.Marker({
+    position: LatLng_hyegeun,
+    map: map,
+    title: 'Cho Hyegeun - Sundaytoz'
+  });
+}
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeu2swoPXpBNclSzLlxLq3EMNee5H4f9w&callback=initMap"></script>
+  </body>
+</html>
+
