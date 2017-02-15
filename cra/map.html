@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>Cra member location</title>
-    <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        height: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <title>Cra member location</title>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            #map {
+                height: 100%;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="map"></div>
+        <script>
 
-function initMap() {
-  var LatLng_hyegeun = {lat: 37.386251, lng: 127.123359};
+            function initMap() {
+                var LatLng_hyegeun = {lat: 37.386251, lng: 127.123359};
 
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 10,
-    center: LatLng_hyegeun
-  });
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 10,
+                    center: LatLng_hyegeun
+                });
 
-  var marker = new google.maps.Marker({
-    position: LatLng_hyegeun,
-    map: map,
-    title: 'Cho Hyegeun - Sundaytoz', 
-    label: 'Cho Hyegeun - Sundaytoz'
-  });
-}
+              var marker = new google.maps.Marker({
+                  position: LatLng_hyegeun,
+                  map: map,
+                  title: 'Sundaytoz / 2', 
+                  label: 'Sundaytoz / 2'
+              });
+
+              var contentString = '<div id="content">'+
+                  '<div id="siteNotice">'+
+                  '</div>'+
+                  '<h1 id="firstHeading" class="firstHeading">Sundaytoz</h1>'+
+                  '<div id="bodyContent">'+
+                  '<p>Cho Hyegeun</p>'+
+                  '<p>KTH</p>'+
+                  '</div>'+
+                  '</div>';
+
+              var infowindow = new google.maps.InfoWindow({
+                  content: contentString
+              });
+              marker.addListener('click', function() {
+                  infowindow.open(map, marker);
+              });
+            }
 
     </script>
     <script async defer
