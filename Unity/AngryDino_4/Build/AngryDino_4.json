@@ -1,0 +1,11 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "AngryDino_4.data.unityweb",
+"asmCodeUrl": "AngryDino_4.asm.code.unityweb",
+"asmMemoryUrl": "AngryDino_4.asm.memory.unityweb",
+"asmFrameworkUrl": "AngryDino_4.asm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
