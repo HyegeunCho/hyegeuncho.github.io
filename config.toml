@@ -1,0 +1,5 @@
+baseURL = 'https://hyegeuncho.github.io'
+languageCode = 'ko-kr'
+title = 'Studying'
+theme = "ananke"
+sectionPagesMenu = "main"
