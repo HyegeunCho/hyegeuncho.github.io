@@ -21,3 +21,13 @@ paginate: 9
 
 plugins:
   - jekyll-paginate
+
+# Collections 설정
+collections:
+  familyworship:
+    output: true
+    permalink: /familyworship/:name/
+
+# 빌드에서 제외할 폴더/파일
+exclude:
+  - disabled_posts
