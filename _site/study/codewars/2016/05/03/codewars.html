@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CodeWars</title>
+  <meta name="description" content="(6kyu) Linked Lists - Length &amp; Count with PythonImplement Length() to count the number of nodes in a linked list.">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/study/codewars/2016/05/03/codewars.html">
+  <link rel="alternate" type="application/rss+xml" title="HGCHO Blog" href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body class="antialiased">
+
+    <!-- Decorative Background Elements -->
+    <div class="bg-decoration">
+      <div class="bg-blob bg-blob-1"></div>
+      <div class="bg-blob bg-blob-2"></div>
+    </div>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">
+      <span class="gradient-text">HGCHO Blog</span>
+    </a>
+
+    <nav class="site-nav">
+      <button class="menu-icon" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <span class="post-meta">
+      <time datetime="2016-05-03T10:00:00+09:00" itemprop="datePublished">
+        2016.05.03
+      </time>
+      
+    </span>
+    <h1 class="post-title gradient-text" itemprop="name headline">CodeWars</h1>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h2>(6kyu) Linked Lists - Length &amp; Count with Python</h2>
+<p>Implement Length() to count the number of nodes in a linked list.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>length(null) === 0
+length(1 -&gt; 2 -&gt; 3 -&gt; null) === 3
+</code></pre></div></div>
+
+<p>Implement Count() to count the occurrences of and integer in a linked list.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>count(null, 1) === 0
+count(1 -&gt; 2 -&gt; 3 -&gt; null, 1) === 1
+count(1 -&gt; 1 -&gt; 1 -&gt; 2 -&gt; 2 -&gt; 2 -&gt; 2 -&gt; 3 -&gt; 3 -&gt; null, 2) === 4
+</code></pre></div></div>
+
+<p>TEST CASE</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">test</span><span class="p">.</span><span class="nf">describe</span><span class="p">(</span><span class="sh">"</span><span class="s">tests for counting the length of a linked list.</span><span class="sh">"</span><span class="p">)</span>
+<span class="nb">list</span> <span class="o">=</span> <span class="nf">build_one_two_three</span><span class="p">()</span>
+<span class="n">test</span><span class="p">.</span><span class="nf">assert_equals</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="bp">None</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="sh">"</span><span class="s">Length of null list should be zero.</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">test</span><span class="p">.</span><span class="nf">assert_equals</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="nc">Node</span><span class="p">(</span><span class="mi">99</span><span class="p">)),</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">"</span><span class="s">Length of single node list should be one.</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">test</span><span class="p">.</span><span class="nf">assert_equals</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="nb">list</span><span class="p">),</span> <span class="mi">3</span><span class="p">,</span> <span class="sh">"</span><span class="s">Length of the three node list should be three.</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">test</span><span class="p">.</span><span class="nf">describe</span><span class="p">(</span><span class="sh">"</span><span class="s">tests for counting occurrences of a particular integer in a linked list.</span><span class="sh">"</span><span class="p">)</span>
+<span class="nb">list</span> <span class="o">=</span> <span class="nf">build_one_two_three</span><span class="p">();</span>
+<span class="n">test</span><span class="p">.</span><span class="nf">assert_equals</span><span class="p">(</span><span class="nf">count</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">"</span><span class="s">list should only contain one 1.</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">test</span><span class="p">.</span><span class="nf">assert_equals</span><span class="p">(</span><span class="nf">count</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">"</span><span class="s">list should only contain one 2.</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">test</span><span class="p">.</span><span class="nf">assert_equals</span><span class="p">(</span><span class="nf">count</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">"</span><span class="s">list should only contain one 3.</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">test</span><span class="p">.</span><span class="nf">assert_equals</span><span class="p">(</span><span class="nf">count</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="mi">99</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="sh">"</span><span class="s">list should return zero for integer not found in list.</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">test</span><span class="p">.</span><span class="nf">assert_equals</span><span class="p">(</span><span class="nf">count</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="sh">"</span><span class="s">null list should always return count of zero.</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>My Solution</p>
+
+<p>재귀함수로 구현하면 쉽게 해결할 수 있다.
+메모리 낭비를 막기 위해 꼬리 재귀로 구현. 그러나 예외처리는 하나도 안되어 있고, 또 쓸데없이 노드를 한번 더 탐색하고 있음.
+차후 성능 상으로도 개선할 여지가 있고, 예외처리도 좀 필요하다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="n">self</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="bp">None</span>
+    
+<span class="k">def</span> <span class="nf">length</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">node</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nf">length</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="nb">next</span><span class="p">)</span>
+  
+<span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">node</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span><span class="p">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span> <span class="nf">count</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="nb">next</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nf">count</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="nb">next</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+</code></pre></div></div>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h2 class="footer-heading gradient-text">HGCHO Blog</h2>
+        <p class="footer-description">Studying
+</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h3 class="footer-col-title">Contact</h3>
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:hgcho84.kr@gmail.com" class="footer-link">
+                <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                hgcho84.kr@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col-title">Social</h3>
+          <ul class="social-media-list">
+            
+            <li>
+              <a href="https://github.com/HyegeunCho" class="footer-link">
+                <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                HyegeunCho
+              </a>
+            </li>
+            
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 HGCHO Blog. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+
+</html>

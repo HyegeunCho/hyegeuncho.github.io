@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(jekyll serve:*)",
+      "Bash(timeout:*)",
+      "Bash(where:*)",
+      "Bash(ruby:*)"
+    ]
+  }
+}

@@ -17,7 +17,7 @@ github_username:  HyegeunCho
 # Build settings
 markdown: kramdown
 # 페이지 당 n 개의 포스트를 보여준다
-paginate: 1 
+paginate: 9
 
-gems:
+plugins:
   - jekyll-paginate
