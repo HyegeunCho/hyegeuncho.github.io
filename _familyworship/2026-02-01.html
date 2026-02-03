@@ -2,192 +2,418 @@
 layout: familyworship
 title: "2026년 2월 2일 ~ 7일 가정 예배"
 date: 2026-02-01
-description: "목사님 설교 말씀 내용을 바탕으로 7세 아이 눈높이에 맞춰 월요일부터 토요일까지 매일 15분 분량의 가정 예배 계획"
+description: "목사님 설교 말씀 내용을 바탕으로 아이 눈높이에 맞춰 월요일부터 토요일까지 매일 15분 분량의 가정 예배 계획"
 ---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이를 위한 주간 가정 예배 계획</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@400;600;800&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        },
+                        pastel: {
+                            blue: '#e0f2fe',
+                            green: '#f0fdf4',
+                            yellow: '#fefce8',
+                            purple: '#f5f3ff',
+                            rose: '#fff1f2',
+                            orange: '#fff7ed'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans KR', 'sans-serif'],
+                        serif: ['Nanum Myeongjo', 'serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(202,100%,90%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(142,100%,95%,1) 0, transparent 50%),
+                radial-gradient(at 100% 0%, hsla(30,100%,95%,1) 0, transparent 50%);
+            background-attachment: fixed;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+            background: rgba(255, 255, 255, 0.85);
+        }
+        .day-badge {
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -0.02em;
+        }
+    </style>
+</head>
+<body class="antialiased text-slate-800 font-sans pb-20">
 
-    <div class="max-w-6xl mx-auto px-6 py-12 md:py-20">
-        <!-- Header Section -->
-        <header class="text-center mb-16 animate-fade-in-up">
-            <h1 class="text-4xl md:text-6xl font-bold font-display mb-6 tracking-tight">
-                <span class="gradient-text">7세 아이를 위한</span><br>
-                주간 가정 예배 계획
+    <!-- Header Section -->
+    <header class="relative pt-20 pb-12 px-6 overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10 animate-fade-in-up">
+            <span class="inline-block py-1 px-4 rounded-full bg-brand-100 text-brand-700 text-sm font-bold mb-4 tracking-wider uppercase">Family Worship Plan</span>
+            <h1 class="text-4xl md:text-6xl font-black font-display text-slate-900 mb-6 leading-tight">
+                아이를 위한 <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600">주간 가정 예배 계획</span>
             </h1>
             <div class="max-w-2xl mx-auto">
-                <p class="text-lg text-gray-600 leading-relaxed font-light">
-                    목사님 설교 말씀 내용을 바탕으로 7세 아이 눈높이에 맞춰 월요일부터 토요일까지 매일 15분 분량의 가정 예배 계획을 세웠습니다. 말씀의 깊은 의미를 아이들이 쉽고 재미있게 이해하고 생활 속에서 실천할 수 있도록 돕는 데 초점을 맞췄습니다.
+                <p class="text-lg md:text-xl text-slate-600 leading-relaxed font-light">
+                    아이의 눈높이에 맞춘 일일 예배를 통해 하나님을 경험하고 <br class="hidden md:block"> 믿음 안에서 단단하게 자라나는 한 주를 만들어보세요.
                 </p>
             </div>
-        </header>
-
-        <!-- Main Content -->
-        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Monday Card -->
-            <article class="glass-card rounded-3xl p-8 animate-fade-in-up" style="animation-delay: 0.1s;">
-                <span class="day-badge bg-blue-100 text-blue-600">월요일</span>
-                <h2 class="text-2xl font-bold mb-4 font-display">하나님은 다 보고 계세요!</h2>
-                <div class="space-y-6">
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-indigo-500 mb-2">말씀 (성경)</h3>
-                        <p class="text-gray-700">누가복음 12:1-7</p>
-                    </section>
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-indigo-500 mb-2">이야기 보따리</h3>
-                        <p class="text-sm leading-relaxed text-gray-600">하나님은 우리가 하는 행동, 말, 그리고 마음속 생각까지도 모두 알고 계세요. 우리가 어디에 있든 항상 함께하시며 사랑으로 지켜보고 계신답니다. 무서운 감시가 아니라, 우리를 너무 사랑하셔서 한순간도 눈을 떼지 않으시는 거예요!</p>
-                    </section>
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-indigo-500 mb-2">오늘의 실천</h3>
-                        <ul class="text-sm text-gray-600 list-disc pl-4 space-y-1">
-                            <li>누가 보지 않아도 하나님이 기뻐하실 행동하기</li>
-                            <li>혼자 방 정리하기</li>
-                        </ul>
-                    </section>
-                    <div class="pt-4 border-t border-gray-100">
-                        <p class="text-xs text-gray-400"><strong>어려울 수 있어요:</strong> 노느라 하나님을 잊어버리거나, 아무도 안 본다고 생각할 때 유혹이 생길 수 있어요.</p>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Tuesday Card -->
-            <article class="glass-card rounded-3xl p-8 animate-fade-in-up" style="animation-delay: 0.2s;">
-                <span class="day-badge bg-amber-100 text-amber-600">화요일</span>
-                <h2 class="text-2xl font-bold mb-4 font-display">하나님을 경외하면 용감해져요</h2>
-                <div class="space-y-6">
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-amber-500 mb-2">말씀 (성경)</h3>
-                        <p class="text-gray-700">출애굽기 3:6</p>
-                    </section>
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-amber-500 mb-2">이야기 보따리</h3>
-                        <p class="text-sm leading-relaxed text-gray-600">모세는 처음에 겁이 많았지만, 하나님의 크신 능력과 임재를 깨닫고 용감해졌어요. '하나님을 두려워함(경외)'은 무서워 떠는 게 아니라, 하나님을 너무 존경해서 그분의 말씀에 가장 귀를 기울이는 거예요.</p>
-                    </section>
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-amber-500 mb-2">오늘의 실천</h3>
-                        <ul class="text-sm text-gray-600 list-disc pl-4 space-y-1">
-                            <li>새로운 일에 도전할 때 "하나님이 내 편이야!" 외치기</li>
-                            <li>무서울 때 하나님께 도와달라고 기도하기</li>
-                        </ul>
-                    </section>
-                    <div class="pt-4 border-t border-gray-100">
-                        <p class="text-xs text-gray-400"><strong>어려울 수 있어요:</strong> 친구들의 시선이 더 신경 쓰이거나, 걱정이 몰려와 하나님의 능력을 잊을 때가 있어요.</p>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Wednesday Card -->
-            <article class="glass-card rounded-3xl p-8 animate-fade-in-up" style="animation-delay: 0.3s;">
-                <span class="day-badge bg-emerald-100 text-emerald-600">수요일</span>
-                <h2 class="text-2xl font-bold mb-4 font-display">거룩하고 놀라우신 하나님!</h2>
-                <div class="space-y-6">
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-emerald-500 mb-2">말씀 (성경)</h3>
-                        <p class="text-gray-700">이사야 6:1-6</p>
-                    </section>
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-emerald-500 mb-2">이야기 보따리</h3>
-                        <p class="text-sm leading-relaxed text-gray-600">이사야는 높은 보좌에 앉으신 하나님을 보았어요. 천사들이 "거룩하다!"라고 외칠 만큼 하나님은 빛나고 깨끗하신 분이에요. 하나님의 그 완벽한 아름다움을 생각하면 우리도 하나님을 닮아 더 착해지고 싶어져요.</p>
-                    </section>
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-emerald-500 mb-2">오늘의 실천</h3>
-                        <ul class="text-sm text-gray-600 list-disc pl-4 space-y-1">
-                            <li>자연 속에서 하나님의 멋진 솜씨 찾아보기</li>
-                            <li>정직하게 말하기 (거룩함의 연습)</li>
-                        </ul>
-                    </section>
-                    <div class="pt-4 border-t border-gray-100">
-                        <p class="text-xs text-gray-400"><strong>어려울 수 있어요:</strong> 장난치고 싶은 마음이 클 때 하나님의 거룩함을 기억하기 힘들 수 있어요.</p>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Thursday Card -->
-            <article class="glass-card rounded-3xl p-8 animate-fade-in-up" style="animation-delay: 0.4s;">
-                <span class="day-badge bg-purple-100 text-purple-600">목요일</span>
-                <h2 class="text-2xl font-bold mb-4 font-display">하나님을 만나면 변해요</h2>
-                <div class="space-y-6">
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-purple-500 mb-2">말씀 (성경)</h3>
-                        <p class="text-gray-700">요한계시록 1:16-17</p>
-                    </section>
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-purple-500 mb-2">이야기 보따리</h3>
-                        <p class="text-sm leading-relaxed text-gray-600">요한은 해처럼 밝은 예수님을 보고 너무 놀라 쓰러졌어요. 하지만 예수님은 따뜻하게 손을 얹으며 "두려워하지 마라"고 하셨죠. 우주의 왕이신 하나님은 무서운 분이 아니라 우리를 가장 따뜻하게 안아주시는 분이에요.</p>
-                    </section>
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-purple-500 mb-2">오늘의 실천</h3>
-                        <ul class="text-sm text-gray-600 list-disc pl-4 space-y-1">
-                            <li>기도할 때 "하나님은 정말 멋진 분이에요"라고 고백하기</li>
-                            <li>걱정되는 일을 하나님께 맡기기</li>
-                        </ul>
-                    </section>
-                    <div class="pt-4 border-t border-gray-100">
-                        <p class="text-xs text-gray-400"><strong>어려울 수 있어요:</strong> 눈에 안 보이는 하나님의 힘을 상상하기 어려울 수 있어요.</p>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Friday Card -->
-            <article class="glass-card rounded-3xl p-8 animate-fade-in-up" style="animation-delay: 0.5s;">
-                <span class="day-badge bg-rose-100 text-rose-600">금요일</span>
-                <h2 class="text-2xl font-bold mb-4 font-display">하나님과 친구가 되어요</h2>
-                <div class="space-y-6">
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-rose-500 mb-2">말씀 (성경)</h3>
-                        <p class="text-gray-700">고린도전서 8:1</p>
-                    </section>
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-rose-500 mb-2">이야기 보따리</h3>
-                        <p class="text-sm leading-relaxed text-gray-600">단순히 성경 지식을 많이 아는 것보다 하나님과 마음으로 친해지는 게 중요해요. 친한 친구에게 일상을 말하듯 하나님께도 내 마음을 이야기해 보세요. 그러면 하나님을 더 깊이 사랑하게 될 거예요.</p>
-                    </section>
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-rose-500 mb-2">오늘의 실천</h3>
-                        <ul class="text-sm text-gray-600 list-disc pl-4 space-y-1">
-                            <li>오늘 있었던 재미있는 일을 하나님께 조잘조잘 말하기</li>
-                            <li>사랑의 마음으로 누군가 도와주기</li>
-                        </ul>
-                    </section>
-                    <div class="pt-4 border-t border-gray-100">
-                        <p class="text-xs text-gray-400"><strong>어려울 수 있어요:</strong> 성경 이야기를 많이 안다고 자랑하고 싶은 마음(교만)이 생길 수 있어요.</p>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Saturday Card -->
-            <article class="glass-card rounded-3xl p-8 animate-fade-in-up" style="animation-delay: 0.6s;">
-                <span class="day-badge bg-orange-100 text-orange-600">토요일</span>
-                <h2 class="text-2xl font-bold mb-4 font-display">예수님이 대신 벌을 받으셨어요</h2>
-                <div class="space-y-6">
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-orange-500 mb-2">이야기 제목</h3>
-                        <p class="text-gray-700 font-medium">위대한 맞바꿈</p>
-                    </section>
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-orange-500 mb-2">이야기 보따리</h3>
-                        <p class="text-sm leading-relaxed text-gray-600">우리가 잘못을 하면 벌을 받아야 하지만, 하나님은 우리를 너무 사랑하셔서 예수님을 보내주셨어요. 죄가 없으신 예수님이 우리 대신 십자가에서 벌을 받으셔서 우리가 다시 하나님께 갈 수 있게 되었답니다.</p>
-                    </section>
-                    <section>
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-orange-500 mb-2">오늘의 실천</h3>
-                        <ul class="text-sm text-gray-600 list-disc pl-4 space-y-1">
-                            <li>잘못했을 때 용기 내어 하나님과 사람에게 사과하기</li>
-                            <li>나에게 짓궂게 군 친구를 먼저 용서해주기</li>
-                        </ul>
-                    </section>
-                    <div class="pt-4 border-t border-gray-100">
-                        <p class="text-xs text-gray-400"><strong>어려울 수 있어요:</strong> 내 잘못을 인정하는 건 부끄럽고 힘들 수 있지만, 하나님은 다 이해해 주세요.</p>
-                    </div>
-                </div>
-            </article>
-
-        </main>
-    </div>
-
-    <!-- Floating UI Decoration -->
-    <div class="fixed bottom-8 right-8 animate-float">
-        <div class="bg-white/90 backdrop-blur shadow-xl rounded-2xl p-4 flex items-center space-x-3 border border-white/50">
-            <div class="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold">&#10013;</div>
-            <div class="text-xs font-medium text-gray-700">
-                <p>매일 15분,</p>
-                <p>사랑이 가득한 예배</p>
-            </div>
         </div>
-    </div>
+        
+        <!-- Animated Background Elements -->
+        <div class="absolute top-10 left-10 w-32 h-32 bg-blue-200 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-float"></div>
+        <div class="absolute top-20 right-10 w-40 h-40 bg-purple-200 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-float" style="animation-delay: 2s"></div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6">
+        <!-- Weekly Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Day 1: Monday -->
+            <article class="glass-card rounded-[2.5rem] p-8 md:p-10 flex flex-col h-full animate-fade-in-up" style="animation-delay: 0.1s">
+                <div class="flex items-center justify-between mb-6">
+                    <span class="day-badge text-4xl font-black text-brand-200">01</span>
+                    <span class="px-4 py-1 rounded-full bg-blue-50 text-blue-600 font-bold text-sm">월요일</span>
+                </div>
+                <h2 class="text-2xl font-bold mb-4 text-slate-900">하나님은 모든 것을 아세요!</h2>
+                
+                <div class="p-4 bg-white/50 rounded-2xl mb-6 border border-white/40">
+                    <p class="text-slate-700 leading-relaxed">하나님은 우리가 어디에 있든지, 무엇을 하든지, 심지어 어떤 생각을 하는지까지도 다 알고 계십니다. CCTV보다 더 정확한 하나님 앞에서 바르게 행동해요.</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="flex items-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-3">
+                        <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span> Bible Verse
+                    </h3>
+                    <p class="font-serif italic text-lg text-slate-700 pl-4 border-l-2 border-blue-200">누가복음 12장 1절~3절 (Luke 12:1-3)</p>
+                </div>
+
+                <div class="space-y-6 flex-grow">
+                    <section>
+                        <h4 class="text-sm font-bold text-blue-600 mb-2">나눔 (Sharing)</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start"><span class="text-blue-400 mr-2">•</span> <span class="text-sm text-slate-600">하나님이 항상 보고 계신다는 느낌은 어떤가요?</span></li>
+                            <li class="flex items-start"><span class="text-blue-400 mr-2">•</span> <span class="text-sm text-slate-600">다른 사람이 안 볼 때 하는 행동도 하나님이 아실까요?</span></li>
+                            <li class="flex items-start"><span class="text-blue-400 mr-2">•</span> <span class="text-sm text-slate-600">하나님 앞에서 솔직하고 진실해야 하는 이유는 무엇인가요?</span></li>
+                        </ul>
+                    </section>
+                    
+                    <section class="p-5 bg-blue-50/50 rounded-2xl">
+                        <h4 class="text-xs font-bold text-blue-500 uppercase tracking-tighter mb-2">간단한 기도문</h4>
+                        <p class="text-slate-700 text-[15px] font-medium leading-relaxed">“하나님 앞에서 항상 솔직하고 정직하게 살게 하시고, 모든 것을 아시는 주님을 늘 기억하게 해주세요.”</p>
+                    </section>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-100 grid grid-cols-2 gap-4">
+                    <div>
+                        <span class="text-[10px] font-black text-slate-400 uppercase block mb-1">Application</span>
+                        <p class="text-xs text-slate-500">다른 사람이 보지 않아도 바른 말과 행동을 하려고 노력합니다.</p>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-black text-slate-400 uppercase block mb-1">Challenge</span>
+                        <p class="text-xs text-slate-500">마음속 생각은 다른 사람이 모르므로 괜찮다고 생각하기 쉽습니다.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Day 2: Tuesday -->
+            <article class="glass-card rounded-[2.5rem] p-8 md:p-10 flex flex-col h-full animate-fade-in-up" style="animation-delay: 0.2s">
+                <div class="flex items-center justify-between mb-6">
+                    <span class="day-badge text-4xl font-black text-green-200">02</span>
+                    <span class="px-4 py-1 rounded-full bg-green-50 text-green-600 font-bold text-sm">화요일</span>
+                </div>
+                <h2 class="text-2xl font-bold mb-4 text-slate-900">진짜 하나님을 만나면 세상이 무섭지 않아요!</h2>
+                
+                <div class="p-4 bg-white/50 rounded-2xl mb-6 border border-white/40">
+                    <p class="text-slate-700 leading-relaxed">모세는 힘센 바로 왕이 무서웠으나, 진짜 하나님을 만난 후 용감해졌습니다. 하나님을 깊이 만나면 우리도 모세처럼 용감해질 수 있어요.</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="flex items-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-3">
+                        <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span> Bible Verse
+                    </h3>
+                    <p class="font-serif italic text-lg text-slate-700 pl-4 border-l-2 border-green-200">출애굽기 3장 6절 (Exodus 3:6)</p>
+                </div>
+
+                <div class="space-y-6 flex-grow">
+                    <section>
+                        <h4 class="text-sm font-bold text-green-600 mb-2">나눔 (Sharing)</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start"><span class="text-green-400 mr-2">•</span> <span class="text-sm text-slate-600">너를 무섭게 하거나 걱정하게 하는 것은 무엇인가요?</span></li>
+                            <li class="flex items-start"><span class="text-green-400 mr-2">•</span> <span class="text-sm text-slate-600">모세가 하나님을 만난 후 어떻게 달라졌나요?</span></li>
+                            <li class="flex items-start"><span class="text-green-400 mr-2">•</span> <span class="text-sm text-slate-600">하나님을 더 잘 만나면 우리의 마음은 어떻게 바뀔까요?</span></li>
+                        </ul>
+                    </section>
+                    
+                    <section class="p-5 bg-green-50/50 rounded-2xl">
+                        <h4 class="text-xs font-bold text-green-500 uppercase tracking-tighter mb-2">간단한 기도문</h4>
+                        <p class="text-slate-700 text-[15px] font-medium leading-relaxed">“모세처럼 하나님을 깊이 만나게 해주세요. 어떤 것도 두려워하지 않고 용감하게 살 수 있도록 도와주세요.”</p>
+                    </section>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-100 grid grid-cols-2 gap-4">
+                    <div>
+                        <span class="text-[10px] font-black text-slate-400 uppercase block mb-1">Application</span>
+                        <p class="text-xs text-slate-500">무서울 때 하나님께 "함께 해주세요!" 하고 기도하고 실천합니다.</p>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-black text-slate-400 uppercase block mb-1">Challenge</span>
+                        <p class="text-xs text-slate-500">무서운 상황에서 바로 하나님을 떠올리기 힘들 수 있습니다.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Day 3: Wednesday -->
+            <article class="glass-card rounded-[2.5rem] p-8 md:p-10 flex flex-col h-full animate-fade-in-up" style="animation-delay: 0.3s">
+                <div class="flex items-center justify-between mb-6">
+                    <span class="day-badge text-4xl font-black text-amber-200">03</span>
+                    <span class="px-4 py-1 rounded-full bg-amber-50 text-amber-600 font-bold text-sm">수요일</span>
+                </div>
+                <h2 class="text-2xl font-bold mb-4 text-slate-900">하나님은 정말 놀랍고 대단한 분이세요!</h2>
+                
+                <div class="p-4 bg-white/50 rounded-2xl mb-6 border border-white/40">
+                    <p class="text-slate-700 leading-relaxed">이사야 선지자가 만난 하나님은 너무나 크고 거룩하셨습니다. 위대하신 하나님을 알면 그분을 존경하고 겸손한 마음을 갖게 됩니다.</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="flex items-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-3">
+                        <span class="w-2 h-2 bg-amber-400 rounded-full mr-2"></span> Bible Verse
+                    </h3>
+                    <p class="font-serif italic text-lg text-slate-700 pl-4 border-l-2 border-amber-200">이사야 6장 1절~6절 (Isaiah 6:1-6)</p>
+                </div>
+
+                <div class="space-y-6 flex-grow">
+                    <section>
+                        <h4 class="text-sm font-bold text-amber-600 mb-2">나눔 (Sharing)</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start"><span class="text-amber-400 mr-2">•</span> <span class="text-sm text-slate-600">하나님이 위대하시다는 걸 상상하면 어떤 기분이 드나요?</span></li>
+                            <li class="flex items-start"><span class="text-amber-400 mr-2">•</span> <span class="text-sm text-slate-600">이사야는 왜 "망했다"고 놀랐을까요?</span></li>
+                            <li class="flex items-start"><span class="text-amber-400 mr-2">•</span> <span class="text-sm text-slate-600">하나님 앞에서 우리는 어떤 마음을 가져야 할까요?</span></li>
+                        </ul>
+                    </section>
+                    
+                    <section class="p-5 bg-amber-50/50 rounded-2xl">
+                        <h4 class="text-xs font-bold text-amber-500 uppercase tracking-tighter mb-2">간단한 기도문</h4>
+                        <p class="text-slate-700 text-[15px] font-medium leading-relaxed">“위대하신 하나님 앞에서 겸손한 마음을 갖게 하시고, 주님이 얼마나 대단한 분인지 늘 기억하게 해주세요.”</p>
+                    </section>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-100 grid grid-cols-2 gap-4">
+                    <div>
+                        <span class="text-[10px] font-black text-slate-400 uppercase block mb-1">Application</span>
+                        <p class="text-xs text-slate-500">자연을 보며 하나님께 감탄하고, 예배 시간에 정성을 다해 집중합니다.</p>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-black text-slate-400 uppercase block mb-1">Challenge</span>
+                        <p class="text-xs text-slate-500">눈에 보이지 않는 하나님의 위대함을 상상하는 것이 어려울 수 있습니다.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Day 4: Thursday -->
+            <article class="glass-card rounded-[2.5rem] p-8 md:p-10 flex flex-col h-full animate-fade-in-up" style="animation-delay: 0.4s">
+                <div class="flex items-center justify-between mb-6">
+                    <span class="day-badge text-4xl font-black text-rose-200">04</span>
+                    <span class="px-4 py-1 rounded-full bg-rose-50 text-rose-600 font-bold text-sm">목요일</span>
+                </div>
+                <h2 class="text-2xl font-bold mb-4 text-slate-900">예수님은 진짜 우리를 구원해주시는 분이에요!</h2>
+                
+                <div class="p-4 bg-white/50 rounded-2xl mb-6 border border-white/40">
+                    <p class="text-slate-700 leading-relaxed">안드레는 예수님을 만나 기뻐했습니다. 예수님의 십자가는 우리를 향한 하나님의 사랑과, 죄를 미워하시는 공의를 동시에 보여줍니다.</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="flex items-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-3">
+                        <span class="w-2 h-2 bg-rose-400 rounded-full mr-2"></span> Bible Verse
+                    </h3>
+                    <p class="font-serif italic text-lg text-slate-700 pl-4 border-l-2 border-rose-200">요한복음 1장 41절 (John 1:41)</p>
+                </div>
+
+                <div class="space-y-6 flex-grow">
+                    <section>
+                        <h4 class="text-sm font-bold text-rose-600 mb-2">나눔 (Sharing)</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start"><span class="text-rose-400 mr-2">•</span> <span class="text-sm text-slate-600">안드레가 구원자를 만났을 때 얼마나 기뻤을까요?</span></li>
+                            <li class="flex items-start"><span class="text-rose-400 mr-2">•</span> <span class="text-sm text-slate-600">십자가가 왜 사랑이면서 동시에 무서운 공의일까요?</span></li>
+                            <li class="flex items-start"><span class="text-rose-400 mr-2">•</span> <span class="text-sm text-slate-600">하나님이 죄를 싫어하신다는 것을 어떻게 알 수 있나요?</span></li>
+                        </ul>
+                    </section>
+                    
+                    <section class="p-5 bg-rose-50/50 rounded-2xl">
+                        <h4 class="text-xs font-bold text-rose-500 uppercase tracking-tighter mb-2">간단한 기도문</h4>
+                        <p class="text-slate-700 text-[15px] font-medium leading-relaxed">“우리를 죄에서 구원해주셔서 감사합니다. 하나님의 사랑과 공의를 바르게 알게 도와주세요.”</p>
+                    </section>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-100 grid grid-cols-2 gap-4">
+                    <div>
+                        <span class="text-[10px] font-black text-slate-400 uppercase block mb-1">Application</span>
+                        <p class="text-xs text-slate-500">잘못을 숨기지 않고 고백하며, 다시 같은 잘못을 하지 않으려 노력합니다.</p>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-black text-slate-400 uppercase block mb-1">Challenge</span>
+                        <p class="text-xs text-slate-500">용서받았으니 괜찮다고 생각하며 다시 죄를 짓기 쉬울 수 있습니다.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Day 5: Friday -->
+            <article class="glass-card rounded-[2.5rem] p-8 md:p-10 flex flex-col h-full animate-fade-in-up" style="animation-delay: 0.5s">
+                <div class="flex items-center justify-between mb-6">
+                    <span class="day-badge text-4xl font-black text-indigo-200">05</span>
+                    <span class="px-4 py-1 rounded-full bg-indigo-50 text-indigo-600 font-bold text-sm">금요일</span>
+                </div>
+                <h2 class="text-2xl font-bold mb-4 text-slate-900">하나님이 얼마나 좋은 분인지 직접 경험해보세요!</h2>
+                
+                <div class="p-4 bg-white/50 rounded-2xl mb-6 border border-white/40">
+                    <p class="text-slate-700 leading-relaxed">콜라 맛을 직접 마셔봐야 알듯이, 하나님이 얼마나 좋으신 분인지 우리의 삶 속에서 직접 만나고 경험해야 진짜 알 수 있습니다.</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="flex items-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-3">
+                        <span class="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span> Bible Verse
+                    </h3>
+                    <p class="font-serif italic text-lg text-slate-700 pl-4 border-l-2 border-indigo-200">시편 34편 8절 (Psalm 34:8)</p>
+                </div>
+
+                <div class="space-y-6 flex-grow">
+                    <section>
+                        <h4 class="text-sm font-bold text-indigo-600 mb-2">나눔 (Sharing)</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start"><span class="text-indigo-400 mr-2">•</span> <span class="text-sm text-slate-600">"맛보아 알지어다"라는 말은 어떤 의미일까요?</span></li>
+                            <li class="flex items-start"><span class="text-indigo-400 mr-2">•</span> <span class="text-sm text-slate-600">기도 응답이나 평안함처럼 하나님을 경험한 적이 있나요?</span></li>
+                            <li class="flex items-start"><span class="text-indigo-400 mr-2">•</span> <span class="text-sm text-slate-600">하나님의 선하심을 맛보면 어떤 마음이 생길까요?</span></li>
+                        </ul>
+                    </section>
+                    
+                    <section class="p-5 bg-indigo-50/50 rounded-2xl">
+                        <h4 class="text-xs font-bold text-indigo-500 uppercase tracking-tighter mb-2">간단한 기도문</h4>
+                        <p class="text-slate-700 text-[15px] font-medium leading-relaxed">“선하신 하나님을 삶 속에서 직접 경험하게 해주세요. 주님을 더욱 사랑하고 의지하고 싶어요.”</p>
+                    </section>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-100 grid grid-cols-2 gap-4">
+                    <div>
+                        <span class="text-[10px] font-black text-slate-400 uppercase block mb-1">Application</span>
+                        <p class="text-xs text-slate-500">매일 기도하고 응답을 기대하며, 하나님의 도우심에 감사 표현을 합니다.</p>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-black text-slate-400 uppercase block mb-1">Challenge</span>
+                        <p class="text-xs text-slate-500">기도 응답이 바로 오지 않을 때 실망하거나 인내하기 어려울 수 있습니다.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Day 6: Saturday -->
+            <article class="glass-card rounded-[2.5rem] p-8 md:p-10 flex flex-col h-full animate-fade-in-up" style="animation-delay: 0.6s">
+                <div class="flex items-center justify-between mb-6">
+                    <span class="day-badge text-4xl font-black text-violet-200">06</span>
+                    <span class="px-4 py-1 rounded-full bg-violet-50 text-violet-600 font-bold text-sm">토요일</span>
+                </div>
+                <h2 class="text-2xl font-bold mb-4 text-slate-900">하나님을 바르게 알면 더 강해져요!</h2>
+                
+                <div class="p-4 bg-white/50 rounded-2xl mb-6 border border-white/40">
+                    <p class="text-slate-700 leading-relaxed">지식으로만 아는 것이 아니라 사랑과 공의의 하나님을 깊이 만날 때, 우리는 세상을 두려워하지 않는 가장 강하고 지혜로운 아이가 됩니다.</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="flex items-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-3">
+                        <span class="w-2 h-2 bg-violet-400 rounded-full mr-2"></span> Bible Verse
+                    </h3>
+                    <p class="font-serif italic text-lg text-slate-700 pl-4 border-l-2 border-violet-200">고린도전서 8장 1절 (1 Corinthians 8:1)</p>
+                </div>
+
+                <div class="space-y-6 flex-grow">
+                    <section>
+                        <h4 class="text-sm font-bold text-violet-600 mb-2">나눔 (Sharing)</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start"><span class="text-violet-400 mr-2">•</span> <span class="text-sm text-slate-600">'아는 것'과 '경험하는 것'은 어떻게 다를까요?</span></li>
+                            <li class="flex items-start"><span class="text-violet-400 mr-2">•</span> <span class="text-sm text-slate-600">지식으로만 하나님을 알 때 생기는 나쁜 점은 무엇인가요?</span></li>
+                            <li class="flex items-start"><span class="text-violet-400 mr-2">•</span> <span class="text-sm text-slate-600">하나님을 바르게 믿으면 우리의 용기는 어떻게 달라질까요?</span></li>
+                        </ul>
+                    </section>
+                    
+                    <section class="p-5 bg-violet-50/50 rounded-2xl">
+                        <h4 class="text-xs font-bold text-violet-500 uppercase tracking-tighter mb-2">간단한 기도문</h4>
+                        <p class="text-slate-700 text-[15px] font-medium leading-relaxed">“하나님을 지식으로만 아는 것이 아니라 깊이 만나게 해주세요. 세상 무엇도 두려워하지 않는 아이가 되게 해주세요.”</p>
+                    </section>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-100 grid grid-cols-2 gap-4">
+                    <div>
+                        <span class="text-[10px] font-black text-slate-400 uppercase block mb-1">Application</span>
+                        <p class="text-xs text-slate-500">잘난 척하지 않고, 하나님을 믿는 믿음으로 친구들에게 본을 보입니다.</p>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-black text-slate-400 uppercase block mb-1">Challenge</span>
+                        <p class="text-xs text-slate-500">자신이 아는 것을 자랑하고 싶을 때 겸손하기가 힘들 수 있습니다.</p>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('article').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
