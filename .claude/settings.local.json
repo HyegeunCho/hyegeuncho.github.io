@@ -4,7 +4,8 @@
       "Bash(jekyll serve:*)",
       "Bash(timeout:*)",
       "Bash(where:*)",
-      "Bash(ruby:*)"
+      "Bash(ruby:*)",
+      "Bash(bundle exec jekyll build:*)"
     ]
   }
 }
