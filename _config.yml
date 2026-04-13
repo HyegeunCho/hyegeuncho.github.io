@@ -31,3 +31,4 @@ collections:
 # 빌드에서 제외할 폴더/파일
 exclude:
   - disabled_posts
+  - CLAUDE.md
